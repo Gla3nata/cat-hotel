@@ -43,12 +43,10 @@ html {
 
 body {
     font-family: var(--font-family);
-    line-height: 100%;
+    line-height: 1.4;
     color: var(--chernyy);
     font-weight: 400;
 }
-
-.header {}
 
 .container {
     max-width: 1200px;
@@ -56,9 +54,29 @@ body {
     margin: 0 auto;
 }
 
+.button {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--belyy);
+    padding: 18px 35px;
+    min-height: 60px;
+    border-radius: 100px;
+    width: 220px;
+    height: 60px;
+    background: var(--rozovyy);
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
+    padding-top: 40px;
 }
 
 .header__logo {
@@ -88,9 +106,43 @@ body {
 }
 
 .header__contact-item {
-    max-width: 150px;
-    width: 100%;
     position: relative;
+    padding-left: 30px;
+}
+
+.contact-location {
+    max-width: 170px;
+    width: 100%;
+}
+
+.contact-location::before {
+    position: absolute;
+    content: '';
+    top: 15%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: url(../images/location.svg) 50% 50% no-repeat;
+}
+
+.contact-time::before {
+    position: absolute;
+    content: '';
+    top: -4px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: url(../images/clock.svg) 50% 50% no-repeat;
+}
+
+.contact-phone::before {
+    position: absolute;
+    content: '';
+    top: -4px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: url(../images/call.svg) 50% 50% no-repeat;
 }
 
 .header__contact-label {}
@@ -100,15 +152,151 @@ body {
 .header__contact-link {}
 
 .contact-profile {
-    background-color: var(--rozovyy);
     border-radius: 100px;
     max-width: 220px;
     height: 60px;
+    padding: 18px 20px 18px 55px;
+}
+
+.contact-profile ::before {
+    position: absolute;
+    content: '';
+    top: 16px;
+    left: 22px;
+    width: 25px;
+    height: 25px;
+    background: url(../images/instagram.svg) 50% 50% no-repeat;
+}
+
+/* main */
+.top {}
+
+.container {}
+
+.top__inner {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 30px;
+}
+
+.top__nav {}
+
+.top__nav-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.top__nav-item {
+    background-color: var(--biryuzovyy);
+    color: var(--belyy);
+    padding: 20px 10px;
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 97%;
+    text-align: center;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-font-size: 16px;
-line-height: 140%;
-color: var(--belyy);
+}
+
+.top__nav-link {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.top__nav-small-price {
+    font-size: 16px;
+}
+
+.top__nav-small-booking {
+    font-size: 9px;
+}
+
+.top__nav-small-observation {
+    font-size: 10px;
+}
+
+.top__nav-pay {
+    font-size: 17px;
+}
+
+.top__nav-big {
+    width: 140px;
+    height: 170px;
+    grid-column: span 4;
+}
+
+.top__nav-all {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 97%;
+
+
+}
+
+.booking {}
+
+.booking__content {}
+
+.booking__title {
+    font-weight: 600;
+    font-size: 48px;
+ margin-bottom: 20px;
+}
+
+.booking__subtitle {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.booking-form {
+    margin-bottom: 55px;
+}
+
+.booking-form__group {
+  
+}
+
+.booking-form__label {}
+
+.booking-form__input {
+    border: none;
+    outline: none;
+    min-height: 36px;
+    border-bottom: 1px solid var(--chernyy);
+    padding: 16px 2px;
+}
+
+.booking-form__input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--seryy);
+}
+
+.booking-form__button {
+    margin-top: 30px;
+}
+
+.top__benefits{
+    display: flex;
+    gap: 60px;
+}
+.top__benefits-item{
+    max-width: 365px;
+    width: 100%;
+    position: relative;
+    padding-left: 65px;
+}
+.top__benefits-item::before{
+    position: absolute;
+    content: '';
+    top: 15%;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background: url(../images/heart.svg) 50% 50% no-repeat;
 }
