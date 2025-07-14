@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/public/fonts/Montserrat-Regular.woff) format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/public/fonts/Montserrat-Medium.woff) format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/public/fonts/Montserrat-SemiBold.woff) format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+
+:root {
+    --font-family: "Montserrat", sans-serif;
+    --rozovyy: #f6a6bf;
+    --bezhevyy: #faf7f5;
+    --belyy: #fff;
+    --chernyy: #242424;
+    --seryy: #848484;
+    --temno-rozovyy: #e36f96;
+    --biryuzovyy: #28afc9;
+    --zheltyy: #fffef1;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 100%;
+    color: var(--chernyy);
+    font-weight: 400;
+}
+
+.header {}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    max-width: 187px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__logo-img {}
+
+.header__logo-text {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--rozovyy);
+    display: block;
+    margin-top: 5px;
+}
+
+.header__contacts {
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.header__contact-item {
+    max-width: 150px;
+    width: 100%;
+    position: relative;
+}
+
+.header__contact-label {}
+
+.header__contact-value {}
+
+.header__contact-link {}
+
+.contact-profile {
+    background-color: var(--rozovyy);
+    border-radius: 100px;
+    max-width: 220px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+font-size: 16px;
+line-height: 140%;
+color: var(--belyy);
+}
