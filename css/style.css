@@ -72,11 +72,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+.header{
+    background: url(../images/clouds.svg) 50% 50% no-repeat;
+}
 
 .header__inner {
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
+    
 }
 
 .header__logo {
@@ -149,13 +153,12 @@ body {
 
 .header__contact-value {}
 
-.header__contact-link {}
+.header__contact-link {
+     padding: 18px 18px 18px 55px;
+}
 
 .contact-profile {
-    border-radius: 100px;
-    max-width: 220px;
-    height: 60px;
-    padding: 18px 20px 18px 55px;
+ padding: 0;
 }
 
 .contact-profile ::before {
@@ -169,26 +172,35 @@ body {
 }
 
 /* main */
-.top {}
+.top {
+    /* background: url(../images/clouds.svg) 100% 0% no-repeat, url(../images/fon-top.svg) 100% 100% no-repeat; */
+    background: url(../images/fon-top.svg) 100% 100% no-repeat;
+    background-size: auto;
+}
 
-.container {}
+.container {
+   
+}
 
 .top__inner {
     display: grid;
     grid-template-columns: 400px 1fr;
     gap: 30px;
+      
 }
 
-.top__nav {}
+.top__nav {
+    position: relative;
+    padding-top: 20px;
+}
 
 .top__nav-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+     background: url(../images/paw.svg) 50% 50% no-repeat;
+        min-height: 400px;
 }
 
 .top__nav-item {
-    background-color: var(--biryuzovyy);
     color: var(--belyy);
     padding: 20px 10px;
     margin-right: 20px;
@@ -201,10 +213,35 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.item-1{
+    position: absolute;
+    top: 184px;
+    left: 27px;
+    width: 65px;
+    transform: rotate(-27deg);
+}
+.item-2{
+     position: absolute;
+     top: 65px;
+    left: 83px;
+    width: 84px;
+    transform: rotate(-13deg);
+}
+.item-3{
+    position: absolute;
+    top: 54px;
+    left: 200px;
+    width: 85px;
+    transform: rotate(0deg);
+}
+.item-4{
+    position: absolute;
+    top: 150px;
+    left: 292px;
+    width: 86px;
+    transform: rotate(13deg);
+}
 .top__nav-link {
-    font-weight: 500;
-    font-size: 16px;
 }
 
 .top__nav-small-price {
@@ -224,9 +261,11 @@ body {
 }
 
 .top__nav-big {
-    width: 140px;
-    height: 170px;
-    grid-column: span 4;
+    position: absolute;
+    bottom: 170px;
+    left: 120px;
+    width: 196px;
+    transform: rotate(-6deg);
 }
 
 .top__nav-all {
@@ -245,6 +284,7 @@ body {
     font-weight: 600;
     font-size: 48px;
  margin-bottom: 20px;
+ padding-top: 68px;
 }
 
 .booking__subtitle {
@@ -284,6 +324,7 @@ body {
 .top__benefits{
     display: flex;
     gap: 60px;
+    padding-top: 150px;
 }
 .top__benefits-item{
     max-width: 365px;
