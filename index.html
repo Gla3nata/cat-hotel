@@ -14,7 +14,7 @@
         <div class="container">
             <div class="header__inner">
                 <a href="/" class="header__logo">
-                    <img src="images/logo.svg" alt="logo" class="header__logo-img">
+                    <img src="images/logo.svg" alt="logo" class="header__logo-img" width="187" height="36">
                     <span class="header__logo-text">Отель для котиков</span>
                 </a>
                 <div class="header__contacts">
@@ -40,17 +40,18 @@
                 <div class="top__inner">
                     <nav class="top__nav">
                         <ul class="top__nav-list">
-                            <li class="top__nav-item item-1"><a href="" class="top__nav-link">
+                            <li class="top__nav-item item-1">
+                                <a href="#price" class="top__nav-link">
                                     Номера <span class="top__nav-small-price"> и цены</span>
                                 </a>
                             </li>
                             <li class="top__nav-item item-2">
-                                <a href="#" class="top__nav-link">
+                                <a href="#order" class="top__nav-link">
                                     Заявка <span class="top__nav-small-booking">на бронирование</span>
                                 </a>
                             </li>
                             <li class="top__nav-item item-3">
-                                <a href="#" class="top__nav-link">
+                                <a href="#observation" class="top__nav-link">
                                     Видео <span class="top__nav-small-observation">наблюдение</span>
                                 </a>
                             </li>
@@ -60,7 +61,7 @@
                                 </a>
                             </li>
                             <li class="top__nav-item top__nav-big">
-                                <a href="#" class="top__nav-link top__nav-all">
+                                <a href="#about" class="top__nav-link top__nav-all">
                                     Всё о&nbsp;нас
                                 </a>
                             </li>
@@ -100,7 +101,7 @@
 
             </div>
         </section>
-        <section class="price">
+        <section class="price" id="price">
             <div class="container">
                 <div class="price__heading">
                     <h2 class="price__title title">Номера и цены</h2>
@@ -112,86 +113,94 @@
 
                 <ul class="price__list">
                     <li class="price__item">
-                        <img class="price__image" src="images/rooms/1.jpg" alt="Фото номера Стандарт">
-                        <div class="price__head">
-                            <p class="price__room-type">Номер <span>"СТАНДАРТ"</span></p>
-                            <span class="price__value">700 руб./сутки</span>
-                        </div>
-                        <div class="price__main">
-                            <div class="price__details">
-                                <span class="price__detail-label">Размер номера:</span>
-                                <span class="price__detail-value">1500×1500×2100 см</span>
+                        <img class="price__image" loading="lazy" src="images/rooms/1.jpg" alt="Фото номера Стандарт" width="380" height="500">
+                        <div class="price__item-content">
+                            <div class="price__head">
+                                <p class="price__room-type">Номер <span>"СТАНДАРТ"</span></p>
+                                <span class="price__value">700 руб./сутки</span>
                             </div>
-                            <div class="price__details">
-                                <span class="price__detail-label">Размер домиков:</span>
-                                <div class="price__detail-box">
-                                    <span class="price__detail-value">32×32 см</span>
-                                    <span class="price__detail-value">38×32 см</span>
+                            <div class="price__main">
+                                <div class="price__details">
+                                    <span class="price__detail-label">Размер номера:</span>
+                                    <span class="price__detail-value">1500×1500×2100 см</span>
                                 </div>
-                            </div>
+                                <div class="price__details">
+                                    <span class="price__detail-label">Размер домиков:</span>
+                                    <div class="price__detail-box">
+                                        <span class="price__detail-value">32×32 см</span>
+                                        <span class="price__detail-value">38×32 см</span>
+                                    </div>
+                                </div>
 
-                        </div>
-                        <div class="price__bottom">
-                            <button class="button price__button">Забронировать</button>
-                        </div>
-                    </li>
-                    <li class="price__item">
-                        <img class="price__image" src="images/rooms/2.jpg" alt="Фото номера Стандарт">
-                        <div class="price__head">
-                            <p class="price__room-type">Номер <span>"СТАНДАРТ +"</span></p>
-                            <span class="price__value">800 руб./сутки</span>
-                        </div>
-                        <div class="price__main">
-                            <div class="price__details">
-                                <span class="price__detail-label">Размер номера:</span>
-                                <span class="price__detail-value">1200*2200*2100 см</span>
                             </div>
-                            <div class="price__details">
-                                <span class="price__detail-label">Размер домиков:</span>
-                                <span class="price__detail-value">38*32 см</span>
-                            </div>
-                        </div>
-                        <div class="price__bottom">
-                            <button class="button price__button">Забронировать</button>
-                        </div>
-                    </li>
-                    <li class="price__item">
-                        <img class="price__image" src="images/rooms/3.jpg" alt="Фото номера Стандарт">
-                        <div class="price__head">
-                            <p class="price__room-type">Номер <span>"ЛЮКС"</span></p>
-                            <span class="price__value">1000 руб./сутки</span>
-                        </div>
-                        <div class="price__main">
-                            <div class="price__details">
-                                <span class="price__detail-label">Размер номера:</span>
-                                <span class="price__detail-value">1200*3700*1500 см</span>
-                            </div>
-                            <div class="price__details">
-                                <span class="price__detail-label">Размер домиков:</span>
-                                <div class="price__detail-box">
-                                    <span class="price__detail-value">32×32 см</span>
-                                    <span class="price__detail-value">38×32 см</span>
-                                </div>
+                            <div class="price__bottom">
+                                <button class="button price__button">Забронировать</button>
                             </div>
                         </div>
 
-                        <div class="price__bottom">
-                            <button class="button price__button">Забронировать</button>
+                    </li>
+                    <li class="price__item">
+                        <img class="price__image" loading="lazy" src="images/rooms/2.jpg" alt="Фото номера СТАНДАРТ +" width="380" height="500">
+                        <div class="price__item-content">
+                            <div class="price__head">
+                                <p class="price__room-type">Номер <span>"СТАНДАРТ +"</span></p>
+                                <span class="price__value">800 руб./сутки</span>
+                            </div>
+                            <div class="price__main">
+                                <div class="price__details">
+                                    <span class="price__detail-label">Размер номера:</span>
+                                    <span class="price__detail-value">1200*2200*2100 см</span>
+                                </div>
+                                <div class="price__details">
+                                    <span class="price__detail-label">Размер домиков:</span>
+                                    <span class="price__detail-value">38*32 см</span>
+                                </div>
+                            </div>
+                            <div class="price__bottom">
+                                <button class="button price__button">Забронировать</button>
+                            </div>
                         </div>
+
+                    </li>
+                    <li class="price__item">
+                        <img class="price__image" loading="lazy" src="images/rooms/3.jpg" alt="Фото номера ЛЮКС" width="380" height="500"> 
+                        <div class="price__item-content">
+                            <div class="price__head">
+                                <p class="price__room-type">Номер <span>"ЛЮКС"</span></p>
+                                <span class="price__value">1000 руб./сутки</span>
+                            </div>
+                            <div class="price__main">
+                                <div class="price__details">
+                                    <span class="price__detail-label">Размер номера:</span>
+                                    <span class="price__detail-value">1200*3700*1500 см</span>
+                                </div>
+                                <div class="price__details">
+                                    <span class="price__detail-label">Размер домиков:</span>
+                                    <div class="price__detail-box">
+                                        <span class="price__detail-value">32×32 см</span>
+                                        <span class="price__detail-value">38×32 см</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price__bottom">
+                                <button class="button price__button">Забронировать</button>
+                            </div>
+                        </div>
+
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="gallery">
+        <div class="gallery">
             <div class="container">
                 <div class="gallery__inner">
                     <div class="gallery__image-big">
-                        <img src="images/gallery/image-1.jpg" alt="фото-1" width="480" height="532">
+                        <img loading="lazy" src="images/gallery/image-1.jpg" alt="фото-1" width="480" height="532">
                     </div>
                     <div class="gallery__image-slider">
                         <div class="gallery__image-small">
-                            <img src="images/gallery/image-2.jpg" alt="фото-2" width="330" height="340">
-                            <img src="images/gallery/image-3.jpg" alt="фото-3" width="330" height="340">
+                            <img loading="lazy" src="images/gallery/image-2.jpg" alt="фото-2" width="330" height="340">
+                            <img loading="lazy" src="images/gallery/image-3.jpg" alt="фото-3" width="330" height="340">
                         </div>
                         <div class="gallery__image-count">
                             <span class="gallery__image-start">1</span>
@@ -217,7 +226,7 @@
 
                 </div>
             </div>
-        </section>
+        </div>
         <section class="description">
             <div class="container">
                 <h2 class="title">Условия размещения</h2>
@@ -271,16 +280,16 @@
                             </ul>
                         </div>
 
-                        <img src="images/cat-description.svg" alt="cat">
+                        <img loading="lazy" src="images/cat-description.svg" alt="фото котика" width="541" height="406">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="order">
+        <section class="order" id="order">
             <div class="container">
                 <h2 class="title">Заявка на бронирование</h2>
                 <div class="order__inner">
-                    <img src="images/booking-cat.svg" alt="cat">
+                    <img loading="lazy" src="images/booking-cat.svg" alt="фото котика" width="625" height="595">
                     <form class="order-form">
                         <!-- Группа 1: Имя и дата заезда -->
                         <div class="order-form__group">
@@ -325,7 +334,7 @@
                 </div>
             </div>
         </section>
-        <section class="observation">
+        <section class="observation" id="observation">
             <div class="container">
                 <div class="observation__inner">
                     <div class="observation__head">
@@ -361,7 +370,7 @@
 
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__head">
                     <h2 class="title about__title">Всё о нас</h2>
@@ -405,8 +414,7 @@
                     </div>
                 </div>
                 <div class="about__important">
-                    <img class="about__important-image" src="images/cat-important.svg" alt="cat" width="509"
-                        height="360">
+                    <img loading="lazy" class="about__important-image" src="images/cat-important.svg" alt="cat" width="541" height="405">
                     <div class="about__important-box">
                         <h3 class="about__important-title">Важно!</h3>
                         <p class="about__important-text">
@@ -484,17 +492,17 @@
                             купоны, кэшбек и тп.
                         </p>
                     </div>
-                    <div class="cooperation__buttons">
-                        <a class="cooperation__button" href="">
+                    <div class="cooperation__links">
+                        <a class="cooperation__link" href="">
                             <span>Ветеринарные клиники</span>
                         </a>
-                        <a class="cooperation__button" href="">
+                        <a class="cooperation__link" href="">
                             <span>Зоомагазины</span>
                         </a>
-                        <a class="cooperation__button" href="">
+                        <a class="cooperation__link" href="">
                             <span>Грумеров</span>
                         </a>
-                        <a class="cooperation__button" href="">
+                        <a class="cooperation__link" href="">
                             <span>Туристические фирмы</span>
                         </a>
                     </div>
@@ -509,24 +517,24 @@
                     <a class="contacts__link" href="">Скопировать адрес для навигатора</a>
                 </div>
                 <div class="contacts__map">
-                    <img src="images/map.jpg" alt="карта" width="1200" height="500">
+                    <img loading="lazy" src="images/map.jpg" alt="карта" width="1200" height="500">
                 </div>
                 <div class="contacts__route">
                     <span class="contacts__route-title">Как пройти</span>
                     <figure class="contacts__image">
-                        <img class="contacts__image-img" src="images/route-1.jpg" alt="Как пройти-1">
+                        <img class="contacts__image-img" loading="lazy" src="images/route-1.jpg" alt="Как пройти-1" width="200" height="210">
                         <figcaption class="contacts__image-caption">
                             Мы находимся в здании многоуровневой парковки со стороны двора
                         </figcaption>
                     </figure>
                     <figure class="contacts__image">
-                        <img class="contacts__image-img" src="images/route-2.jpg" alt="Как пройти-2">
+                        <img class="contacts__image-img" loading="lazy" src="images/route-2.jpg" alt="Как пройти-2" width="200" height="210">
                         <figcaption class="contacts__image-caption">
                             Вход со двора под вывеской "Вход" 5 этаж
                         </figcaption>
                     </figure>
                     <figure class="contacts__image">
-                        <img src="images/route-3.jpg" alt="Как пройти-3" class="contacts__image-img">
+                        <img class="contacts__image-img" loading="lazy" src="images/route-3.jpg" alt="Как пройти-3" width="200" height="210">
                         <figcaption class="contacts__image-caption">
                             Если навигатор привел Вас со стороны бизнес центра к шлагбауму, можно пройти по тропинке
                             направо
@@ -542,18 +550,18 @@
                 <p class="footer__copy">Copyright &copy;&nbsp;2025</p>
                 <ul class="footer__list">
                     <li class="footer__item">
-                        <a href="" class="-link">
+                        <a href="#price" class="-link">
                             Номера и цены
                         </a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">
+                        <a href="#order" class="footer__link">
                             Заявка на бронирование
                         </a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">
-                            Видео наблюдение
+                        <a href="#observation" class="footer__link">
+                            Видеонаблюдение
                         </a>
                     </li>
                     <li class="footer__item">
@@ -562,15 +570,13 @@
                         </a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">
+                        <a href="#about" class="footer__link">
                             Всё о&nbsp;нас
                         </a>
                     </li>
                 </ul>
             </div>
-
         </div>
-
     </footer>
 
 </body>

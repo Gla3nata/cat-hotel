@@ -230,6 +230,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.top__nav-item:hover{
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 .item-1 {
@@ -342,6 +347,9 @@ body {
     width: 100%;
     position: relative;
     padding-left: 65px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .top__benefits-item::before {
@@ -405,12 +413,14 @@ body {
 
 .price__item {
     padding: 0;
+    border: 1px solid rgba(246, 166, 191, 0.5);
 }
 
 .price__image {
-    margin-bottom: 20px;
 }
-
+.price__item-content{
+    padding: 20px 0 30px 20px;
+}
 .price__head {
     margin-bottom: 40px;
     display: grid;
@@ -943,13 +953,13 @@ body {
     margin-bottom: 30px;
 }
 
-.cooperation__buttons {
+.cooperation__links {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
-.cooperation__button {
+.cooperation__link {
     width: 246px;
     height: 246px;
     border-radius: 100%;
