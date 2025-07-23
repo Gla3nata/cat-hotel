@@ -186,12 +186,35 @@
             <div class="container">
                 <div class="gallery__inner">
                     <div class="gallery__image-big">
-                        <img src="" alt="фото-1">
+                        <img src="images/gallery/image-1.jpg" alt="фото-1" width="480" height="532">
                     </div>
-                    <div class="gallery__image-small">
-                        <img src="" alt="фото-2">
-                        <img src="" alt="фото-3">
+                    <div class="gallery__image-slider">
+                        <div class="gallery__image-small">
+                            <img src="images/gallery/image-2.jpg" alt="фото-2" width="330" height="340">
+                            <img src="images/gallery/image-3.jpg" alt="фото-3" width="330" height="340">
+                        </div>
+                        <div class="gallery__image-count">
+                            <span class="gallery__image-start">1</span>
+                            /
+                            <span class="gallery__image-end">11</span>
+                        </div>
+                        <div class="gallery__image-buttons">
+                            <div class="gallery-button-prev">
+                                <svg width="15" height="24" viewBox="0 0 15 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 2L3 12L13 22" stroke-width="3" />
+                                </svg>
+
+                            </div>
+                            <div class="gallery-button-next">
+                                <svg width="15" height="24" viewBox="0 0 15 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 2L12 12L2 22" stroke-width="3" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -341,7 +364,7 @@
         <section class="about">
             <div class="container">
                 <div class="about__head">
-                    <h2 class="title">Всё о нас</h2>
+                    <h2 class="title about__title">Всё о нас</h2>
                     <p class="subtitle about__subtitle">Ценность нашей гостиницы в том, что вы можете полностью доверить
                         нам заботу и уход за вашим котиком!</p>
                 </div>
@@ -361,45 +384,53 @@
                         </div>
                     </div>
                     <div class="about__info">
-                        <h4 class="about__title">Где и с кем оставить своего котика на время отпуска?</h4>
+                        <h4 class="about__info-title">Мы предлагаем</h4>
                         <ul class="about__list">
                             <li class="about__item">гостиница оснащена приточно-вытяжной вентиляцией, с регулировкой
                                 температуры в летний и зимний период</li>
+                            <li class="about__item">подготовка номера к заселению нового постояльца (обработка
+                                поверхностей дезинфицирующими средствами, кварцевание)</li>
                             <li class="about__item">соблюдение санитарно-гигиенических норм</li>
+                            <li class="about__item">видеонаблюдение в режиме 24/7</li>
                             <li class="about__item">круглосуточное присутствие котоняни</li>
+                            <li class="about__item">наличие холодильника для хранения влажного корма</li>
                             <li class="about__item">кормление и уход (индивидуальный подход к каждому котику)</li>
+                            <li class="about__item">ежедневный фото/видеоотчет на мессенджеры</li>
                             <li class="about__item">индивидуальные номера
                                 <span class="about__item-point">10 номеров более 2 кв. м с окном</span>
                                 <span class="about__item-point">6 номеров более 2 кв. м без окна</span>
                                 <span class="about__item-point">1 номер более 3 кв.м с окнами</span>
                             </li>
-                            <li class="about__item">подготовка номера к заселению нового постояльца (обработка
-                                поверхностей дезинфицирующими средствами, кварцевание)</li>
-                            <li class="about__item">видеонаблюдение в режиме 24/7</li>
-                            <li class="about__item">наличие холодильника для хранения влажного корма</li>
-                            <li class="about__item">ежедневный фото/видеоотчет на мессенджеры</li>
                         </ul>
                     </div>
                 </div>
                 <div class="about__important">
-                    <h3 class="about__important-title">Важно!</h3>
-                    <p class="about__important-text">
-                        При необходимости медицинского наблюдения за больным котиком или после операции, для его
-                        безопасности, рекомендуем выбирать гостиницу при ветеринарной клинике, т.к. гостиница для кошек
-                        не является медицинским учреждением, а предоставляет услуги по временному содержанию животных.
-                    </p>
+                    <img class="about__important-image" src="images/cat-important.svg" alt="cat" width="509"
+                        height="360">
+                    <div class="about__important-box">
+                        <h3 class="about__important-title">Важно!</h3>
+                        <p class="about__important-text">
+                            При необходимости медицинского наблюдения за больным котиком или после операции, для его
+                            безопасности, рекомендуем выбирать гостиницу при ветеринарной клинике, т.к. гостиница для
+                            кошек
+                            не является медицинским учреждением, а предоставляет услуги по временному содержанию
+                            животных.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </section>
         <section class="questions">
             <div class="container">
-                <h2 class="title">Страхи котовладельца</h2>
+                <h2 class="title questions__title">Страхи котовладельца</h2>
                 <div class="questions__list">
                     <div class="questions__item">
                         <div class="questions__header">
-                            <h3>Вдруг моя кошка почувствует себя плохо, а я на другом конце света и не могу ничего
+                            <h3 class="questions__question">Вдруг моя кошка почувствует себя плохо, а я на другом конце
+                                света и не могу ничего
                                 предпринять?</h3>
-                            <span class="questions__toggle">+</span>
+                            <span class="questions__toggle"></span>
                         </div>
                         <div class="questions__content">
                             <p>При малейшем отклонении от нормы поведения или состояния кошки, мы незамедлительно
@@ -413,18 +444,8 @@
 
                     <div class="questions__item">
                         <div class="questions__header">
-                            <h3>Мою кошку посадят в номер и забудут о ней!</h3>
-                            <span class="questions__toggle">+</span>
-                        </div>
-                        <div class="questions-content">
-                            <!-- Здесь можно добавить контент для этого пункта -->
-                        </div>
-                    </div>
-
-                    <div class="questions__item">
-                        <div class="questions-header">
-                            <h3>Мой котик боится замкнутых пространств!</h3>
-                            <span class="questions__toggle">+</span>
+                            <h3 class="questions__question">Мою кошку посадят в номер и забудут о ней!</h3>
+                            <span class="questions__toggle"></span>
                         </div>
                         <div class="questions__content">
                             <!-- Здесь можно добавить контент для этого пункта -->
@@ -433,8 +454,18 @@
 
                     <div class="questions__item">
                         <div class="questions__header">
-                            <h3>Боюсь реакции на присутствие незнакомых котику людей!</h3>
-                            <span class="questions__toggle">+</span>
+                            <h3 class="questions__question">Мой котик боится замкнутых пространств!</h3>
+                            <span class="questions__toggle"></span>
+                        </div>
+                        <div class="questions__content">
+                            <!-- Здесь можно добавить контент для этого пункта -->
+                        </div>
+                    </div>
+
+                    <div class="questions__item">
+                        <div class="questions__header">
+                            <h3 class="questions__question">Боюсь реакции на присутствие незнакомых котику людей!</h3>
+                            <span class="questions__toggle"></span>
                         </div>
                         <div class="questions__content">
                             <!-- Здесь можно добавить контент для этого пункта -->
@@ -445,18 +476,27 @@
         </section>
         <section class="cooperation">
             <div class="container">
-                <h2 class="title">Сотрудничество</h2>
                 <div class="cooperation__inner">
                     <div class="cooperation__text">
-                        <p class="subtitle">Приглашаем к сотрудничеству</p>
-                        <p>Сотрудничество на основе коллаборации: совместные конкурсы, скидочные купоны, кэшбек и тп.
+                        <h2 class="title cooperation__title">Сотрудничество</h2>
+                        <p class="cooperation__subtitle">Приглашаем к сотрудничеству</p>
+                        <p class="subtitle">Сотрудничество на основе коллаборации: совместные конкурсы, скидочные
+                            купоны, кэшбек и тп.
                         </p>
                     </div>
                     <div class="cooperation__buttons">
-                        <div class="cooperation__box">Ветеринарные клиники</div>
-                        <div class="cooperation__box">Зоомагазины</div>
-                        <div class="cooperation__box">Грумеров</div>
-                        <div class="cooperation__box">Туристические фирмы</div>
+                        <a class="cooperation__button" href="">
+                            <span>Ветеринарные клиники</span>
+                        </a>
+                        <a class="cooperation__button" href="">
+                            <span>Зоомагазины</span>
+                        </a>
+                        <a class="cooperation__button" href="">
+                            <span>Грумеров</span>
+                        </a>
+                        <a class="cooperation__button" href="">
+                            <span>Туристические фирмы</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -464,11 +504,35 @@
         <section class="contacts">
             <div class="container">
                 <h2 class="title">Адрес и контакты</h2>
-                <p class="subtitle">г. Санкт-Петербург ул. Ключевая, д.32 </p>
-                <br>
-                <div>map</div>
-                <br>
-                <div>Как пройти</div>
+                <div class="contacts__inner">
+                    <p class="contacts__subtitle">г. Санкт-Петербург ул. Ключевая, д.32 </p>
+                    <a class="contacts__link" href="">Скопировать адрес для навигатора</a>
+                </div>
+                <div class="contacts__map">
+                    <img src="images/map.jpg" alt="карта" width="1200" height="500">
+                </div>
+                <div class="contacts__route">
+                    <span class="contacts__route-title">Как пройти</span>
+                    <figure class="contacts__image">
+                        <img class="contacts__image-img" src="images/route-1.jpg" alt="Как пройти-1">
+                        <figcaption class="contacts__image-caption">
+                            Мы находимся в здании многоуровневой парковки со стороны двора
+                        </figcaption>
+                    </figure>
+                    <figure class="contacts__image">
+                        <img class="contacts__image-img" src="images/route-2.jpg" alt="Как пройти-2">
+                        <figcaption class="contacts__image-caption">
+                            Вход со двора под вывеской "Вход" 5 этаж
+                        </figcaption>
+                    </figure>
+                    <figure class="contacts__image">
+                        <img src="images/route-3.jpg" alt="Как пройти-3" class="contacts__image-img">
+                        <figcaption class="contacts__image-caption">
+                            Если навигатор привел Вас со стороны бизнес центра к шлагбауму, можно пройти по тропинке
+                            направо
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
     </main>

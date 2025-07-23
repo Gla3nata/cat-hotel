@@ -85,12 +85,14 @@ body {
 .title {
     font-weight: 600;
     font-size: 40px;
+    margin-bottom: 50px;
 }
 
 .subtitle {
     font-weight: 500;
     font-size: 20px;
     width: 100%;
+   
 }
 
 .header {
@@ -460,6 +462,68 @@ body {
     margin: 40px auto;
 }
 
+.gallery__inner {
+    display: flex;
+    gap: 30px;
+}
+
+.gallery__image-slider {}
+
+.gallery__image-small {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.gallery__image-big {}
+
+.gallery__image-count {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--seryy);
+    margin-bottom: 60px;
+}
+
+.gallery__image-start {}
+
+.gallery__image-end {}
+
+.gallery__image-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-button-prev,
+.gallery-button-next {
+    width: 70px;
+    height: 70px;
+    background-color: var(--rozovyy);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.gallery-button-prev svg,
+.gallery-button-next svg {
+    stroke: #fff;
+    transition: all 0.3s;
+}
+
+.gallery-button-prev:hover,
+.gallery-button-next:hover {
+    background-color: var(--belyy);
+    border: 1px solid var(--rozovyy);
+}
+
+.gallery-button-prev:hover svg,
+.gallery-button-next:hover svg {
+    stroke: var(--rozovyy)
+}
+
 .description {
     margin-bottom: 140px;
 }
@@ -675,10 +739,300 @@ body {
     grid-column: 4;
 }
 
+.about {
+    margin-bottom: 170px;
+}
 
+.about__head {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    margin-bottom: 60px;
+}
+
+.about__title {
+    max-width: 200px;
+    width: 100%;
+}
+
+.about__main {}
+
+.about__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    margin-bottom: 30px
+}
+
+.about__heading {
+    font-weight: 600;
+    font-size: 20px;
+    max-width: 370px;
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+}
+
+.about__heading::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -50px;
+    width: 417px;
+    height: 396px;
+    background: url(../images/cat-happy.svg) 50% 50% no-repeat;
+}
+
+.about__text p {
+    margin-bottom: 16px;
+}
+
+.about__info {
+    padding-top: 100px;
+    margin-bottom: 90px;
+}
+
+.about__info-title {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 68px;
+}
+
+.about__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    list-style-type: none;
+    row-gap: 40px;
+}
+
+.about__item {
+    font-size: 18px;
+    position: relative;
+    padding-left: 70px;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50px;
+}
+
+.about__item::before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: url(../images/fluent-cat.svg) 50% 50% no-repeat;
+}
+
+.about__item-point {
+    display: block;
+    font-size: 16px;
+    color: var(--seryy);
+    margin-top: 12px;
+}
+
+.about__important {
+    background: var(--zheltyy);
+    display: flex;
+    padding: 90px 70px 85px 50px;
+    gap: 70px;
+}
+
+.about__important-title {
+    font-weight: 600;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding-top: 100px;
+}
+
+.about__important-text {
+    max-width: 472px;
+    width: 100%;
+}
+
+.about__important-image {
+    transform: rotate(-5.27deg);
+}
+
+.questions {
+    margin-bottom: 170px;
+}
+
+.questions__title {
+    margin-bottom: 52px;
+}
+
+.questions__list {}
+
+.questions__item {
+    background: rgba(250, 247, 245, 0.4);
+    padding: 35px 30px 25px 30px;
+}
+
+.questions__header {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    gap: 40px;
+
+}
+
+.questions__question {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 20px;
+
+}
+
+.questions__toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.questions__toggle::before,
+.questions__toggle::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: var(--rozovyy);
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    transition: all 0.8s ease 0s;
+}
+
+.questions__toggle::after {
+    transform: rotate(90deg);
+}
+
+.questions__content {
+    max-width: 720px;
+}
+
+.questions__content p {
+    margin-bottom: 16px
+}
+
+.cooperation {
+    margin-bottom: 100px;
+}
+
+.cooperation__inner {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.cooperation__text {
+    max-width: 450px;
+    width: 100%;
+}
+
+.cooperation__title {
+    margin-bottom: 70px;
+}
+
+.cooperation__subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cooperation__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.cooperation__button {
+    width: 246px;
+    height: 246px;
+    border-radius: 100%;
+    border: 1px solid var(--rozovyy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.cooperation__button span {
+    max-width: 200px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+}
+.cooperation__button:hover{
+ transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/*  */
 .contacts {
     background: var(--bezhevyy);
+    padding: 80px 0;
 }
+.contacts__inner{
+    display: flex;
+    gap: 200px;
+}
+.contacts__subtitle{
+    font-weight: 500;
+font-size: 20px;
+ margin-bottom: 50px;
+}
+
+.contacts__link {
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--seryy);
+}
+
+.contacts__map {
+    margin-bottom: 70px;
+}
+
+.contacts__route {
+    display: flex;
+    gap: 80px;
+}
+
+.contacts__route-title {
+    display: block;
+    position: relative;
+    max-width: 225px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 26px;
+
+}
+
+.contacts__route-title::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 195px;
+    height: 200px;
+    background: url(../images/paw-contacts.svg) 50% 50% no-repeat;
+}
+
+.contacts__image-caption {
+    max-width: 236px;
+    width: 100%;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+}
+
 
 .footer__inner {
     display: flex;
