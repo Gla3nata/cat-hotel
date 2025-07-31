@@ -49,9 +49,10 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1180px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .button {
@@ -92,7 +93,7 @@ body {
     font-weight: 500;
     font-size: 20px;
     width: 100%;
-   
+
 }
 
 .header {
@@ -208,7 +209,6 @@ body {
 }
 
 .top__nav {
-    position: relative;
     padding-top: 20px;
 }
 
@@ -216,6 +216,11 @@ body {
     justify-items: center;
     background: url(../images/paw.svg) 50% 50% no-repeat;
     min-height: 400px;
+    position: relative;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 381px;
+    margin: 0 auto;
 }
 
 .top__nav-item {
@@ -233,43 +238,50 @@ body {
     transition: all 0.3s;
     cursor: pointer;
 }
-.top__nav-item:hover{
+
+.top__nav-item:hover {
     filter: drop-shadow(2px 4px 6px black);
 }
 
 .item-1 {
     position: absolute;
-    top: 184px;
-    left: 27px;
+    top: 175px;
+    left: 16px;
     width: 65px;
     transform: rotate(-27deg);
 }
 
 .item-2 {
     position: absolute;
-    top: 65px;
-    left: 83px;
+    top: 45px;
+    left: 73px;
     width: 84px;
     transform: rotate(-13deg);
 }
 
 .item-3 {
     position: absolute;
-    top: 54px;
-    left: 200px;
+    top: 31px;
+    left: 190px;
     width: 85px;
     transform: rotate(0deg);
 }
 
 .item-4 {
     position: absolute;
-    top: 150px;
-    left: 292px;
+    top: 120px;
+    left: 284px;
     width: 86px;
     transform: rotate(13deg);
 }
 
-.top__nav-link {}
+.top__nav-big {
+    position: absolute;
+    top: 55%;
+    left: 110px;
+    width: 196px;
+    transform: rotate(-6deg);
+}
 
 .top__nav-small-price {
     font-size: 16px;
@@ -287,13 +299,7 @@ body {
     font-size: 17px;
 }
 
-.top__nav-big {
-    position: absolute;
-    bottom: 170px;
-    left: 120px;
-    width: 196px;
-    transform: rotate(-6deg);
-}
+
 
 .top__nav-all {
     font-weight: 600;
@@ -375,7 +381,8 @@ body {
 
 
 .price__discount-box {
-    width: 285px;
+    max-width: 285px;
+    width: 100%;
     height: 205px;
     display: flex;
     align-items: center;
@@ -384,6 +391,7 @@ body {
     position: relative;
     background: url(../images/border-pink.svg) 50% 50% no-repeat;
     background-size: contain;
+    margin: 0 auto;
 }
 
 .price__discount-box::before {
@@ -414,13 +422,19 @@ body {
 .price__item {
     padding: 0;
     border: 1px solid rgba(246, 166, 191, 0.5);
+    display: grid;
 }
 
 .price__image {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
 }
-.price__item-content{
+
+.price__item-content {
     padding: 20px 0 30px 20px;
 }
+
 .price__head {
     margin-bottom: 40px;
     display: grid;
@@ -470,6 +484,7 @@ body {
 
 .gallery {
     margin: 40px auto;
+    position: relative;
 }
 
 .gallery__inner {
@@ -487,12 +502,19 @@ body {
 
 .gallery__image-big {}
 
+.gallery__image-slide {
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+}
+
 .gallery__image-count {
     font-weight: 500;
     font-size: 20px;
     line-height: 150%;
     color: var(--seryy);
     margin-bottom: 60px;
+    white-space: nowrap;
 }
 
 .gallery__image-start {}
@@ -550,6 +572,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     font-size: 18px;
+    gap: 30px;
 }
 
 .description__section-title {
@@ -574,9 +597,19 @@ body {
     width: 100%;
 }
 
+.description__section-box p {
+    margin-bottom: 16px;
+}
+
 .description__section-item::marker {
     color: var(--rozovyy);
     font-size: 1.5em;
+}
+
+.description__section-image {
+    max-width: 541px;
+    width: 100%;
+    height: auto;
 }
 
 .order {
@@ -584,33 +617,39 @@ body {
 }
 
 .order__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
+.order__inner-image {
+    max-width: 625px;
+    width: 100%;
+    height: auto;
 }
 
 .order-form {
     background: var(--zheltyy);
     padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
-.order-form__group {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 20px;
+.order-form__field {}
 
-}
-
-.order-form__field {
-    flex: 1;
+.order-form__phone {
+    grid-column: 1;
+    grid-row: 2;
 }
 
 .order-form__input {
     width: 100%;
-    padding: 12px;
+    padding: 10px 12px;
     border: none;
     border-bottom: 1px solid var(--chernyy);
     font-size: 16px;
     background-color: transparent;
+    min-height: 47px;
 }
 
 .order-form__input:focus {
@@ -662,12 +701,11 @@ body {
 .order-form__input[type="date"]:focus:before,
 .order-form__input[type="date"]:valid:before {
     display: none;
-    /* Скрываем плейсхолдер при фокусе или выборе даты */
 }
 
 .order-form__input[type="date"]:valid {
     color: inherit;
-    /* Возвращаем цвет текста после выбора даты */
+
 }
 
 .order-form__label {
@@ -845,7 +883,8 @@ body {
 
 .about__important {
     background: var(--zheltyy);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 90px 70px 85px 50px;
     gap: 70px;
 }
@@ -864,6 +903,9 @@ body {
 
 .about__important-image {
     transform: rotate(-5.27deg);
+    max-width: 541px;
+    width: 100%;
+    height: auto;
 }
 
 .questions {
@@ -970,7 +1012,7 @@ body {
     transition: all 0.3s;
 }
 
-.cooperation__button span {
+.cooperation__link span {
     max-width: 200px;
     text-align: center;
     display: block;
@@ -979,9 +1021,10 @@ body {
     font-size: 20px;
     line-height: 150%;
 }
-.cooperation__button:hover{
- transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+.cooperation__link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /*  */
@@ -989,14 +1032,17 @@ body {
     background: var(--bezhevyy);
     padding: 80px 0;
 }
-.contacts__inner{
+
+.contacts__inner {
     display: flex;
     gap: 200px;
+
 }
-.contacts__subtitle{
+
+.contacts__subtitle {
     font-weight: 500;
-font-size: 20px;
- margin-bottom: 50px;
+    font-size: 20px;
+    margin-bottom: 50px;
 }
 
 .contacts__link {
@@ -1007,6 +1053,12 @@ font-size: 20px;
 
 .contacts__map {
     margin-bottom: 70px;
+}
+
+.contacts__map-image {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
 }
 
 .contacts__route {
@@ -1021,7 +1073,6 @@ font-size: 20px;
     width: 100%;
     font-weight: 600;
     font-size: 26px;
-
 }
 
 .contacts__route-title::after {
@@ -1043,9 +1094,9 @@ font-size: 20px;
     line-height: 140%;
 }
 
-
 .footer__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 150px 1fr;
     justify-content: space-between;
     padding: 30px 0;
 }
@@ -1064,4 +1115,505 @@ font-size: 20px;
     font-weight: 600;
     font-size: 13px;
     line-height: 1;
+        justify-content: flex-end;
+}
+
+@media (max-width: 1280px) {
+    .price__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery__image-small {
+        display: none;
+    }
+
+    .order-form {
+
+        padding: 10px;
+        display: block
+    }
+
+    .order-form__field {
+        margin-bottom: 20px;
+    }
+
+    .observation__head {
+        gap: 100px;
+    }
+
+    .observation__rooms {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .contacts__route {
+        gap: 15px;
+         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1000px) {
+    .booking__title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 900px) {
+    .header__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__contacts {
+        flex-direction: column;
+    }
+
+    .top__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .top__nav-big {
+        padding: 5px 10px;
+        top: auto;
+        left: 118px;
+        bottom: 70px;
+    }
+
+    .booking__title {
+        padding: 0;
+    }
+
+    .observation__subtitle {
+        max-width: 100%;
+        margin-bottom: 30px
+    }
+
+    .observation__rooms {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .observation__room:nth-child(1) {
+        grid-column: 1;
+    }
+
+    .observation__room:nth-child(n+10) {
+        display: none;
+    }
+
+    .about {
+        margin-bottom: 30px
+    }
+
+    .about__head {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .about__wrapper {
+        display: block;
+
+    }
+
+    .about__important {
+        padding: 20px 10px 15px 10px;
+        gap: 10px;
+    }
+
+    .cooperation__links {
+        grid-template-columns: auto;
+    }
+
+    .cooperation__link {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        border-radius: 10px;
+    }
+
+    .contacts__subtitle {
+        margin-bottom: 0px;
+    }
+
+    .contacts__link {
+        margin-bottom: 20px;
+    }
+
+    .contacts__inner {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .contacts__map {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .top {
+        background: none;
+    }
+
+    .room-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .header__nav {
+        flex-direction: column;
+    }
+
+    .top__benefits {
+        flex-direction: column;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .price {
+        margin-bottom: 50px;
+    }
+
+    .price__heading {
+        gap: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: normal;
+    }
+
+    .price__discount {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .price__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .price__item-content {
+        padding: 15px 15px 30px 15px;
+    }
+
+    .price__button {
+        width: 100%;
+    }
+
+    .gallery__inner {
+        display: block;
+    }
+
+    .gallery__image-buttons {
+        display: none;
+    }
+
+    .gallery__image-count {
+        font-size: 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .description__section-title {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .description__section {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+
+    .description__section-subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .description__conditions {
+        padding: 0;
+    }
+
+    .observation {
+        margin-bottom: 90px;
+    }
+
+    .observation__head {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .observation__room {
+        width: 110px;
+        height: 110px;
+    }
+
+    .about__heading {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .about__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .about__heading::after {
+        bottom: 0;
+        left: 0;
+        top: auto;
+        width: 300px;
+        height: 300px;
+        background-size: contain;
+    }
+
+    .about__info-title {
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 28px;
+    }
+
+    .about__list {
+        display: block;
+    }
+
+    .about__item {
+        margin-bottom: 20px;
+    }
+
+    .about__info {
+        padding: 0;
+    }
+
+    .about__important {
+        grid-template-columns: auto;
+    }
+
+    .about__important-title {
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .about__important-image {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        grid-row: 2;
+    }
+
+    .cooperation__inner {
+        flex-direction: column;
+    }
+
+    .cooperation__text {
+        max-width: 700px;
+        margin-bottom: 30px;
+    }
+
+    .cooperation__link {
+        position: relative;
+        border: none;
+        width: auto;
+        padding-left: 100px;
+        justify-content: flex-start;
+    }
+
+    .cooperation__link::before {
+        position: absolute;
+        content: '';
+        top: 0px;
+        left: 0;
+        width: 73px;
+        height: 60px;
+        background: url(../images/paw-room.svg) 50% 50% no-repeat;
+        background-size: contain;
+    }
+
+    .cooperation__link span {
+        margin: 0;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .cooperation__link:hover {
+        box-shadow: none;
+        color: #B65978;
+    }
+
+    .contacts__route-title {
+        font-weight: 400;
+        font-size: 18px;
+
+    }
+    .footer__list{
+            justify-content: flex-start;
+    flex-wrap: wrap;
+        grid-column: 1/3;
+        margin-bottom: 20px;
+    }
+    .footer__copy{
+        grid-column: 1/3;
+        grid-row: 2;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .description__section {
+        grid-template-columns: 1fr;
+
+        margin: 0;
+        gap: 0;
+    }
+
+    .description__section-list {
+        padding-left: 20px;
+    }
+
+    .order__inner {
+        display: block;
+    }
+
+    .price__head,
+    .price__details {
+        display: block;
+    }
+
+    .observation__room {
+        width: 80px;
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .observation__room::after {
+        width: 40px;
+        height: 33px;
+        background-size: contain;
+    }
+.contacts__route-title::after{
+    content: none;
+}
+}
+
+@media (max-width: 420px) {
+    .top__nav-list {
+        background-size: contain;
+    }
+
+    .top__nav-item {
+        font-size: 15px;
+
+        line-height: 81%;
+    }
+
+    .item-1 {
+        width: 65px;
+    }
+
+    .item-2 {
+        top: 14%;
+        left: 20%;
+        width: 68px;
+    }
+
+    .item-3 {
+        width: 65px;
+        top: 9%;
+        left: 52%;
+    }
+
+    .item-4 {
+        top: 144px;
+        left: 75%;
+        width: 66px;
+    }
+
+    .top__nav-small-price {
+        font-size: 12px;
+    }
+
+    .top__nav-pay {
+        font-size: 14px;
+    }
+
+    .top__nav-small-observation,
+    .top__nav-small-booking {
+        word-break: break-word;
+    }
+
+    .top__nav-all {
+        font-size: 24px;
+    }
+
+    .booking__title {
+        font-size: 25px;
+    }
+
+    .top__nav-big {
+        left: 40%;
+        bottom: 100px;
+        width: 95px;
+    }
+
+    .description__section-image {
+        grid-row: 1;
+    }
+
+    .questions__header {
+        gap: 10px;
+    }
+
+    .questions__question {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .questions__content p {
+        font-size: 13px
+    }
+
+    .questions__toggle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .questions__toggle::before,
+    .questions__toggle::after {
+        content: "";
+        width: 20px;
+        height: 2px;
+        position: absolute;
+        top: 10px;
+        left: 2px;
+
+    }
+
+    .questions__item {
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 370px) {
+    .item-1 {
+        left: 2%;
+    }
+
+    .item-2 {
+        top: 19%;
+        left: 18%;
+        width: 68px;
+    }
+
+    .item-3 {
+        width: 65px;
+        top: 14%;
+
+        left: 50%;
+    }
+
 }
