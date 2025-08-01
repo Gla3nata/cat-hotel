@@ -962,9 +962,25 @@ body {
     transform: rotate(90deg);
 }
 
-.questions__content {
+/* .questions__content {
     max-width: 720px;
+    display: none;
+} */
+.questions__content {
+  max-width: 720px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: 
+    max-height 0.5s ease-in-out,
+    opacity 0.3s ease 0.2s; 
 }
+
+.questions__content.active {
+  max-height: 320px;
+  opacity: 1;
+}
+
 
 .questions__content p {
     margin-bottom: 16px
